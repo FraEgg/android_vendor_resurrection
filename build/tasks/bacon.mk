@@ -24,5 +24,5 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv $(PRODUCT_OUT)/system/etc/RR/Changelog.txt $(PRODUCT_OUT)/$(RR_VERSION)-Changelog.txt
 	$(hide) $(MD5SUM) $(RR_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(RR_TARGET_PACKAGE).md5sum
 	@echo "Package Complete: $(RR_TARGET_PACKAGE)" >&2
-	$(hide) ./vendor/rr/tools/rr.sh
+	$(hide) ./vendor/cm/tools/rr.sh
   

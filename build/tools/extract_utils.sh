@@ -148,7 +148,8 @@ function target_args() {
 #
 function prefix_match() {
     local PREFIX="$1"
-    for FILE in "${PRODUCT_PACKAGES_LIST[@]}"; do
+    for LINE in "${PRODUCT_PACKAGES_LIST[@]}"; do
+        local FILE=$(target_file "$LINE")
         if [[ "$FILE" =~ ^"$PREFIX" ]]; then
             printf '%s\n' "${FILE#$PREFIX}"
         fi
@@ -750,7 +751,7 @@ function oat2dex() {
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$LINEAGE_ROOT"/vendor/lineage/build/tools/"$HOST"/vdexExtractor
+        export VDEXEXTRACTOR="$LINEAGE_ROOT"/vendor/rr/build/tools/"$HOST"/vdexExtractor
     fi
 
     # Extract existing boot.oats to the temp folder

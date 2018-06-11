@@ -47,16 +47,16 @@ touch $Changelog
 
 # ask for days and version
 echo ""
-echo ${cya}" ▼ Generating (for last 30 days) github format changelog.."${txtrst}
+echo ${cya}" ▼ Generating (for last 180 days) github format changelog.."${txtrst}
 echo ""
 echo >> $Changelog
-echo "# $source_name Version 6.0.0 Changelog"    >> $Changelog;
+echo "# $source_name Version 6.1.0 Changelog"    >> $Changelog;
 echo '' >> $Changelog;
 echo >> $Changelog;
 
 cd $source_tree
 
-for i in $(seq 30);
+for i in $(seq 180);
 do
 export After_Date=`date --date="$i days ago" +%m-%d-%Y`
 k=$(expr $i - 1)

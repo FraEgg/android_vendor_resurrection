@@ -141,7 +141,6 @@ endif
 
 # Required rr packages
 PRODUCT_PACKAGES += \
-    BluetoothExt \
     LineageParts \
     Development \
     Profiles
@@ -207,21 +206,16 @@ PRODUCT_PACKAGES += \
     bash \
     bzip2 \
     curl \
-    fsck.ntfs \
     gdbserver \
     htop \
     lib7z \
     libsepol \
     micro_bench \
-    mke2fs \
-    mkfs.ntfs \
-    mount.ntfs \
     oprofiled \
     pigz \
     powertop \
     sqlite3 \
     strace \
-    tune2fs \
     unrar \
     unzip \
     vim \
@@ -240,10 +234,14 @@ PRODUCT_PACKAGES += \
     libhealthd.lineage
 endif
 
-# exFAT tools
+# Filesystems tools
 PRODUCT_PACKAGES += \
     fsck.exfat \
-    mkfs.exfat
+    fsck.ntfs \
+    mke2fs \
+    mkfs.exfat \
+    mkfs.ntfs \
+    mount.ntfs
 
 # Openssh
 PRODUCT_PACKAGES += \

@@ -31,8 +31,8 @@ PRODUCT_COPY_FILES += \
 	$(RINGTONE_PATH)/boosted/Highscore.ogg:system/media/audio/ringtones/Highscore.ogg \
 	$(RINGTONE_PATH)/boosted/Lyon.ogg:system/media/audio/ringtones/Lyon.ogg \
 	$(RINGTONE_PATH)/boosted/Rockin.ogg:system/media/audio/ringtones/Rockin.ogg \
-	$(RINGTONE_PATH)/boosted/Resurrection.mp3:system/media/audio/ringtones/Resurrection.mp3
-
+	$(RINGTONE_PATH)/boosted/Resurrection.mp3:system/media/audio/ringtones/Resurrection.mp3 \
+	$(RINGTONE_PATH)/boosted/LuisWuff.ogg:system/media/audio/ringtones/LuisWuff.ogg
 else
 PRODUCT_COPY_FILES += \
     $(RINGTONE_PATH)/Boxbeat.ogg:system/media/audio/ringtones/Boxbeat.ogg \
@@ -42,5 +42,6 @@ PRODUCT_COPY_FILES += \
     $(RINGTONE_PATH)/Rockin.ogg:system/media/audio/ringtones/Rockin.ogg \
     $(RINGTONE_PATH)/Sheep.mp3:system/media/audio/ringtones/Sheep.mp3 \
     $(RINGTONE_PATH)/Resurrection.mp3:system/media/audio/ringtones/Resurrection.mp3 \
-    $(RINGTONE_PATH)/Yukaay.ogg:system/media/audio/ringtones/Yukaay.ogg
+    $(RINGTONE_PATH)/Yukaay.ogg:system/media/audio/ringtones/Yukaay.ogg \
+    $(RINGTONE_PATH)/LuisWuff.ogg:system/media/audio/ringtones/LuisWuff.ogg
 endif

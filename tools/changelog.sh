@@ -67,13 +67,13 @@ k=$(expr $i - 1)
 	export Until_Date=`date --date="$k days ago" +%m/%d/%Y`
     echo ""
 	echo ${blu}" 〉 Generating day number $i ▪ $Until_Date.."${txtrst}
-	source=$(repo forall -pc 'git log --oneline --after=$After_Date --until=$Until_Date');
+	source=$(repo forall -c 'git log --oneline --after=$After_Date --until=$Until_Date');
 
 	if [ -n "${source##+([:space:])}" ]; then
 
 		echo " ▼ $Until_Date" >> $Changelog;
 		echo '' >> $Changelog;
-		repo forall -pc 'git log --oneline --after=$After_Date --until=$Until_Date' | grep -v "Automatic translation import" | sed 's/^$/#EL /' | sed 's/^/ ▪ /' | sed 's/ ▪ #EL //' >> $Changelog
+		repo forall -c 'git log --oneline --after=$After_Date --until=$Until_Date' | grep -v "Automatic translation import" | sed 's/^$/#EL /' | sed 's/^/ ▪ /' | sed 's/ ▪ #EL //' >> $Changelog
 		echo >> $Changelog;
 	fi
 
